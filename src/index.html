@@ -15,6 +15,12 @@
             height: 100;
             width: 100;
             display: block;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            border-radius: 50%;
+        }
+
+        .flip_able img {
+            border-radius: 50%;
         }
 
         .flip_able.flip {
@@ -44,16 +50,12 @@
 </head>
 
 <body class="h-100 w-100">
-    <div class="mt-3 text-center">
-        <h2>Match the cards</h2>
-    </div>
+    <memory-header></memory-header>
     <div class="container">
         <hr>
-        <div class="bg-info card card-body shadow">
-            <memory-board></memory-board>
-        </div>
+        <memory-board></memory-board>
     </div>
-    <script src="main.js"></script>
+    <script src="bundle.js"></script>
 </body>
 
 </html>
