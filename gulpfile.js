@@ -19,6 +19,8 @@ const TASK_LIST = ['clean', 'compile-ts', ['minify-compress', 'copy-html'], 'min
 
 const gulpCopy = require('gulp-copy');
 
+const ghPages = require('gulp-gh-pages');
+task('deploy', () => src('./dist/**/*').pipe(ghPages()));
 gulp.task('clean', () => del(['dist']));
 gulp.task('minify-html', () => {
     return gulp.src(paths.pages)
